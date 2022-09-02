@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, ::before, ::after{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #2222;
+        }
+
+        .card{
+            background-color: white;
+            height: 250px;
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .card::after, .card::before{
+            content: "I am after";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            right: -220px;
+            background-color: cadetblue;
+            border-radius: 10px;
+            top: 0;
+            padding: 14px;
+        }
+
+        .card::before{
+            content: "I am before";
+            background-color: blueviolet;
+            right: auto;
+            top: 0;
+            left: -220px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="card"></div>
+</body>
+</html>
